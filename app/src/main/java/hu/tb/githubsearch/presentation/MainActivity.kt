@@ -1,9 +1,8 @@
 package hu.tb.githubsearch.presentation
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
-import hu.tb.githubsearch.R
 import hu.tb.githubsearch.databinding.ActivityMainBinding
 
 @AndroidEntryPoint

@@ -3,7 +3,6 @@ package hu.tb.githubsearch.presentation.gitRepoList
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import hu.tb.githubsearch.commons.Constants
 import hu.tb.githubsearch.commons.Resource
 import hu.tb.githubsearch.domain.use_case.GetGitRepoUseCase
 import kotlinx.coroutines.flow.MutableStateFlow

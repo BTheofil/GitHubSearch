@@ -1,15 +1,13 @@
 package hu.tb.githubsearch.presentation.gitRepoDetails
 
-import android.net.Uri
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
-import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 import hu.tb.githubsearch.R
@@ -34,6 +32,15 @@ class GitRepoDetailsFragment : Fragment(R.layout.fragment_git_repo_details) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupDetailsFragment()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    private fun setupDetailsFragment(){
         val selectedRepo = arguments?.get("repo") as Item
 
         selectedRepo.apply {
@@ -57,10 +64,5 @@ class GitRepoDetailsFragment : Fragment(R.layout.fragment_git_repo_details) {
                 startActivity(browserIntent)
             }
         }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

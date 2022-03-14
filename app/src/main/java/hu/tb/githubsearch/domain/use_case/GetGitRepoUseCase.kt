@@ -1,7 +1,6 @@
 package hu.tb.githubsearch.domain.use_case
 
 import hu.tb.githubsearch.commons.Resource
-import hu.tb.githubsearch.data.remote.dto.GitRepoDto
 import hu.tb.githubsearch.data.remote.dto.Item
 import hu.tb.githubsearch.domain.repository.GitRepoRepository
 import kotlinx.coroutines.flow.Flow
